@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <!-- mysql connector -->
+  <classPathEntry
+      location="/Users/cano/.m2/repository/mysql/mysql-connector-java/8.0.23/mysql-connector-java-8.0.23.jar" />
+
+  <context id="context1" >
+    <!-- JDBC -->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+      connectionURL="jdbc:mysql://localhost:3306/TestDB"
+      userId="root" password="" />
+
+      <!-- 自動生成するエンティティ -->
+
+      <javaModelGenerator
+          targetPackage="net.deskplate.mybatis.entity"
+          targetProject="src/main/java/"
+      />
+      <sqlMapGenerator
+          targetPackage="net.deskplate.mybatis.entity"
+          targetProject="src/main/java/"
+      />
+      <javaClientGenerator
+          targetPackage="net.deskplate.mybatis.entity"
+          targetProject="src/main/java/"
+          type="XMLMAPPER"
+      />
+
+    <table schema="testDB" tableName="Employee" />
+
+  </context>
+</generatorConfiguration>
