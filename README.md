@@ -147,6 +147,39 @@ mysql> CREATE TABLE `Employee` (
 
 ```
 
+- エンティティ生成
+
 ```
 $ mvn mybatis-generator:generate
+```
+
+- エンティティ生成後
+- resources/mybatis-config.xml
+
+```
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+  <!-- JDBC -->
+  <environments default="MyBatisExample">
+    <environment id="MyBatisExample">
+      <transactionManager type="JDBC" />
+      <dataSource type="POOLED">
+        <property name="driver" value="com.mysql.cj.jdbc.Driver" />
+        <property name="url" value="jdbc:mysql://localhost/MyBatisExampleDB" />
+        <property name="username" value="root" />
+        <property name="password" value="" />
+      </dataSource>
+    </environment>
+  </environments>
+
+  <!-- エンティティのパッケージ -->
+  <mappers>
+    <package name="net.deskplate.mybatis.entity" />
+  </mappers>
+
+</configuration>
 ```
