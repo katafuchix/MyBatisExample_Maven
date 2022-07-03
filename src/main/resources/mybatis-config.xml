@@ -22,10 +22,4 @@
     <package name="net.deskplate.mybatis.entity" />
   </mappers>
 
-<!--
-  <mappers>
-    <mapper resource="net/deskplate/mybatis/entity/EmployeeMapper.xml" />
-  </mappers>
--->
-
 </configuration>
