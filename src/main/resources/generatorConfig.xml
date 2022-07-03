@@ -33,8 +33,9 @@
           type="XMLMAPPER"
       />
 
+    <!-- 自動生成対象のテーブル名 -->
     <table tableName="Employee" domainObjectName="Employee">
-      <generatedKey column="id" sqlStatement="JDBC"/>
+      <generatedKey column="id" sqlStatement="JDBC"/> <!-- auto increament 余計なXMLが入ってしまうため不要かも？ -->
     </table>
 
   </context>

@@ -27,6 +27,7 @@
       <scope>test</scope>
     </dependency>
 
+    <!-- ADD -->
     <!-- http://mvnrepository.com/artifact/org.mybatis/mybatis -->
     <dependency>
         <groupId>org.mybatis</groupId>
@@ -45,7 +46,8 @@
         <artifactId>mysql-connector-java</artifactId>
         <version>8.0.23</version>
     </dependency>
-
+    <!-- ADD END -->
+    
   </dependencies>
 
   <build>
