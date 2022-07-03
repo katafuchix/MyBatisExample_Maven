@@ -194,5 +194,16 @@ $ mvn mybatis-generator:generate
 　
 - Mapper.xmlをコピー
     - net/deskplate/mybatis/entity フォルダごと resources フォルダにコピーする
+    - パスの設定などでクリアできそう
+　
+- 動作確認
 
+```
+% mvn package
+% java -jar target/MyBatisExampleDB.jar  
+
+または
+
+% java -cp target/MyBatisExampleDB.jar net.deskplate.mybatis.App   
+```
 
