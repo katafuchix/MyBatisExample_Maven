@@ -183,3 +183,16 @@ $ mvn mybatis-generator:generate
 
 </configuration>
 ```
+　
+- Mapper.xml　にこういう項目ができてしまうので削除  config設定が悪いため
+
+```
+    <selectKey resultType="java.lang.Integer" keyProperty="id" >
+      JDBC
+    </selectKey>
+```
+　
+- Mapper.xmlをコピー
+    - net/deskplate/mybatis/entity フォルダごと resources フォルダにコピーする
+
+
